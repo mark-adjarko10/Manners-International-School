@@ -136,6 +136,62 @@ nav ul li a:hover {
   text-align: left;
 }
 
+/* EDUCATIONAL LEVELS */
+
+.levels-section {
+  padding: 60px 8%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.levels-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.levels-intro {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #555;
+}
+
+.levels-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.level-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.level-card:hover {
+  transform: translateY(-8px);
+}
+
+.level-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.level-card h3 {
+  margin: 15px 0 10px;
+  color: #00aacc;
+}
+
+.level-card p {
+  padding: 0 15px 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+
 /* OTHER STAFF */
 
 .staff-section {
