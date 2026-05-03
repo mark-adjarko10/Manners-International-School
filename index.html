@@ -249,7 +249,7 @@
 
   <div class="contact-container">
 
-    <form class="contact-form">
+    <form class="contact-form" id="contact-form">
       <div class="input-group">
         <input type="text" name="name" placeholder="Your Full Name" required>
       </div>
@@ -343,20 +343,22 @@ window.onscroll = function () {
 
 <!-- SCRIPT TO RECEIVE EMAIL  -->
 <script>
-document.getElementById("contact-form")
-.addEventListener("submit", function(e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("contact-form")
+  .addEventListener("submit", function(e) {
+    e.preventDefault();
 
-  emailjs.sendForm(
-    "service_rgfmfac",
-    "template_yytg7j6",
-    this
-  )
-  .then(function() {
-    alert("✅ Message sent successfully!");
-  }, function(error) {
-    alert("❌ Failed to send message.");
-    console.log(error);
+    emailjs.sendForm(
+      "service_rgfmfac",
+      "template_yytg7j6",
+      this
+    )
+    .then(function() {
+      alert("✅ Message sent successfully!");
+    }, function(error) {
+      alert("❌ Failed to send message.");
+      console.log(error);
+    });
   });
 });
 </script>
